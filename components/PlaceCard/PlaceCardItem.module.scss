@@ -1,0 +1,309 @@
+.PlaceCardItem {
+	margin: 0 auto 2rem auto;
+	width: clamp(360px, 40%, 400px);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.PlaceCardItem__SaveBtn_Absolute {
+	display: none;
+}
+
+.PlaceCardItem__ImageCarousel {
+	overflow: hidden;
+	cursor: grab;
+}
+
+.PlaceCardItem__ImageInnerCarousel {
+	display: flex;
+}
+
+.PlaceCardItem__ImageContainer {
+	min-width: 80%;
+	padding: 0 5% 0 0;
+	&:last-child {
+		padding: 0;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		pointer-events: none;
+	}
+}
+
+.PlaceCardItem__Info {
+	width: 100%;
+	padding: 0 1rem;
+	border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+
+.PlaceCardItem__Mobile_Review_SaveBtn_Container {
+	margin-top: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.PlaceCardItem__Mobile_Review_Container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.PlaceCardItem__Mobile_Review_Stars {
+	font-size: 0.625rem;
+	font-weight: 500;
+	line-height: 1.5;
+	color: rgba(51, 51, 51, 1);
+}
+
+.PlaceCardItem__Mobile_Review_Para {
+	font-size: 0.625rem;
+	font-weight: 500;
+	line-height: 1.5;
+	color: rgba(102, 102, 102, 1);
+}
+
+.PlaceCardItem__Mobile_SaveBtn {
+	width: max-content;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.PlaceCardItem__FullName {
+	margin-top: 0.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+	color: rgba(0, 0, 0, 1);
+}
+
+.PlaceCardItem__Destination_Container,
+.PlaceCardItem__Tags_Container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.PlaceCardItem__Destination_Container {
+	margin-top: 0.5rem;
+}
+
+.PlaceCardItem__Tags_Container {
+	margin: 1rem 0;
+}
+
+.PlaceCardItem__Destination_Para {
+	font-size: 0.625rem;
+	color: rgba(53, 100, 226, 1);
+	svg {
+		margin-right: 0.2rem;
+	}
+}
+
+.PlaceCardItem__Seperation_Line {
+	font-size: 0.625rem;
+	color: rgba(102, 102, 102, 1);
+}
+
+.PlaceCardItem__Destination_OtherDetails_Para {
+	font-size: 0.625rem;
+	color: rgba(102, 102, 102, 1);
+}
+
+.PlaceCardItem__Tags {
+	padding: 0.28rem 0.6rem;
+	font-size: 0.625rem;
+	font-weight: 600;
+	color: rgba(51, 51, 51, 1);
+	background-color: rgba(237, 242, 255, 1);
+	border-radius: 35px;
+}
+
+.PlaceCardItem__Desktop_Review_Container {
+	display: none;
+}
+
+.PlaceCardItem__Price_ViewDetails_Container {
+	margin: 2rem 0 0.5rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.PlaceCardItem__OldPrice_Para {
+	text-decoration: line-through;
+	font-size: 0.75rem;
+	color: rgba(102, 102, 102, 1);
+}
+
+.PlaceCardItem__DiscountedPrice_Para_Container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+	gap: 0.5rem;
+	color: rgb(51, 51, 51);
+}
+
+.PlaceCardItem__DiscountedPrice_Para_Price {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.PlaceCardItem__DiscountedPrice_Para_Unit {
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.PlaceCardItem__ViewDetails_Link {
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: 1.5;
+	color: rgba(53, 100, 226, 1);
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+	.PlaceCardItem {
+		position: relative;
+		border: 1px solid rgba(221, 221, 221, 1);
+		transition: transform 0.1s ease-in;
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+	.PlaceCardItem__SaveBtn_Absolute {
+		padding: 0.3rem 0.5rem;
+		display: flex;
+		gap: 0.3rem;
+		position: absolute;
+		top: 0.5rem;
+		right: 0.8rem;
+		z-index: 2;
+		cursor: pointer;
+		background-color: rgba(255, 255, 255, 1);
+		border: none;
+		border-radius: 35px;
+	}
+	.PlaceCardItem__ImageContainer {
+		min-width: 98%;
+		padding: 0 2% 0 0;
+		img {
+			border-radius: 10px 10px 0 0;
+		}
+	}
+	.PlaceCardItem__Mobile_Review_SaveBtn_Container {
+		display: none;
+	}
+	.PlaceCardItem__Info {
+		border-bottom: none;
+	}
+	.PlaceCardItem__FullName {
+		font-size: 1.5rem;
+	}
+	.PlaceCardItem__Destination_Para {
+		font-size: 0.875rem;
+		svg {
+			transform: scale(1.02);
+			margin-right: 0.4rem;
+		}
+	}
+	.PlaceCardItem__Destination_OtherDetails_Para {
+		font-size: 0.875rem;
+	}
+	.PlaceCardItem__Tags {
+		margin: 0.5rem 0;
+		padding: 0.3rem 0.6rem;
+		font-size: 0.75rem;
+	}
+	.PlaceCardItem__Desktop_Review_Container {
+		margin-top: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 0.3rem;
+	}
+	.PlaceCardItem__Desktop_Review_Stars_Para {
+		font-size: 0.875rem;
+		line-height: 1.5;
+	}
+	.PlaceCardItem__Desktop_Review_Stars_SVG_Container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 0.2rem;
+	}
+	.PlaceCardItem__Desktop_Review_Para {
+		font-size: 0.875rem;
+		line-height: 1.5;
+		color: rgba(102, 102, 102, 1);
+	}
+	.PlaceCardItem__Price_ViewDetails_Container {
+		padding: 1rem 0;
+		align-items: center;
+		border-top: 1px solid rgba(221, 221, 221, 1);
+	}
+	.PlaceCardItem__Price_Container {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+	.PlaceCardItem__OldPrice_Para {
+		order: 2;
+		font-size: 0.875rem;
+	}
+	.PlaceCardItem__DiscountedPrice_Para_Container {
+		order: 1;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0;
+	}
+	.PlaceCardItem__DiscountedPrice_Para_Price {
+		line-height: 1;
+		margin-bottom: 0.4rem;
+	}
+	.PlaceCardItem__DiscountedPrice_Para_Unit {
+		font-size: 0.75rem;
+		line-height: 1;
+	}
+	.PlaceCardItem__ViewDetails_Link {
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		border: 2px solid rgba(53, 100, 226, 1);
+		> svg {
+			display: none;
+		}
+		&:hover {
+			background-color: rgba(53, 100, 226, 1);
+			color: rgba(255, 255, 255, 1);
+		}
+	}
+}
+
+@media screen and (min-width: 1201px) {
+	.PlaceCardItem {
+		margin: 0 1.65% 2rem 1.65%;
+		width: 30%;
+		transition: transform 0.1s ease-in;
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+}

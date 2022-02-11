@@ -1,0 +1,27 @@
+.PlaceCardContiner {
+	padding: 2rem 0;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.PlaceCardContiner {
+		padding: 2rem 2rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 2rem;
+		> div {
+			justify-self: center;
+		}
+	}
+}
+
+@media screen and (min-width: 1301px) {
+	.PlaceCardContiner {
+		padding: 3rem 2rem;
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		gap: 0;
+	}
+}
